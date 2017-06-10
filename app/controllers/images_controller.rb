@@ -1,8 +1,8 @@
 class ImagesController < ApplicationController
 
   def process_image
-    p image_params[:image_url]
-    p image_params[:mode]
+    json = image_params.slice(:image_url, :mode).to_json
+    ImageProcessingJob.perform_later(json)
 
     render json: {status: "OK"}
   end
