@@ -1,8 +1,13 @@
 class ImagesController < ApplicationController
 
-  def process_image
-    json = image_params.slice(:image_url, :mode).to_json
-    ImageProcessingJob.perform_later(json)
+  def create
+    FileUtils.mkdir_p("/tmp/pg")
+
+    file = image_params[:file]
+    file_path = "/tmp/pg/#{SecureRandom.uuid}-#{file.original_filename}"
+    File.binwrite(file_path, file.read)
+
+    ImageProcessingJob.perform_later(file_path)
 
     render json: {status: "OK"}
   end
@@ -10,6 +15,6 @@ class ImagesController < ApplicationController
   private
 
   def image_params
-    params.permit(:image_url, :mode)
+    params.require(:image).permit(:file)
   end
 end
