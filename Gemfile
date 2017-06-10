@@ -9,6 +9,7 @@ gem 'rails', '~> 5.1.1'
 gem 'puma', '~> 3.7'
 gem 'jbuilder', '~> 2.5'
 gem 'redis', '~> 3.0'
+gem 'redis-namespace', '~> 1.5'
 gem 'sidekiq', '~> 5.0'
 gem 'rack-cors'
 
