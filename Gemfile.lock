@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/kenchan/suzuri_client
+  revision: 495ec4fcb974998ef45133bc60e21b46e52bf8eb
+  specs:
+    suzuri_client (0.1.0)
+      heroics
+      moneta
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,6 +79,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
+    moneta (1.0.0)
     multi_json (1.12.1)
     nio4r (2.1.0)
     nokogiri (1.8.0)
@@ -130,8 +139,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    suzuri_client (0.1.0)
-      heroics
     thor (0.19.4)
     thread_safe (0.3.6)
     tzinfo (1.2.3)
@@ -155,7 +162,7 @@ DEPENDENCIES
   sidekiq (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
-  suzuri_client
+  suzuri_client!
   tzinfo-data
 
 BUNDLED WITH

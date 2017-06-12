@@ -13,7 +13,7 @@ gem 'redis-namespace', '~> 1.5'
 gem 'sidekiq', '~> 5.0'
 gem 'rack-cors'
 
-gem 'suzuri_client'
+gem 'suzuri_client', git: 'https://github.com/kenchan/suzuri_client'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
