@@ -5,7 +5,7 @@ worker_processes 2
 preload_app true
 timeout 30
 listen "/tmp/unicorn.sock", :backlog => 64
-pid "/home/joe/pg-web/shared/tmp/pids/unicorn.pid"
+pid "#{@app_path}/shared/tmp/pids/unicorn.pid"
 
 stderr_path "#{@app_path}/shared/log/unicorn.stderr.log"
 stdout_path "#{@app_path}/shared/log/unicorn.stdout.log"
