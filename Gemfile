@@ -17,6 +17,10 @@ gem 'suzuri_client', git: 'https://github.com/kenchan/suzuri_client'
 
 group :development, :test do
   gem 'capistrano', "~> 3.8"
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
