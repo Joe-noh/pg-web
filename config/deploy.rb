@@ -17,7 +17,7 @@ set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 set :deploy_to, "/home/joe/pg-web"
 
 # Default value for :linked_files is []
-# append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, ".env"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
