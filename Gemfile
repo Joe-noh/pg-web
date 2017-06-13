@@ -12,7 +12,6 @@ gem 'redis', '~> 3.0'
 gem 'redis-namespace', '~> 1.5'
 gem 'sidekiq', '~> 5.0'
 gem 'rack-cors'
-gem 'dotenv-rails'
 
 gem 'suzuri_client', git: 'https://github.com/kenchan/suzuri_client'
 
