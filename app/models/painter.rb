@@ -7,6 +7,7 @@ class Painter
     output = File.join(dir, "out-#{file}.png")
 
     command = "#{pg_path} --input #{input} --output #{output}"
+    Rails.logger.info command
     system(command)
 
     return output
